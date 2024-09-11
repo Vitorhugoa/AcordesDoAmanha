@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/frame3Corrigido.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sevillana-regular {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ContainerMaior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Container h1 {
+    font-size: 120px;
+    text-shadow: -20px 20px 8px;
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.Container h2 {
+    font-size: 60px;
+    text-shadow: -20px 2px 8px;
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.ContaineMenor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.duas-cores {
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Configuração da Navbar */
+
+#Acordes {
+    font-family: "Sevillana", cursive;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-left: 3vw;
+}
+
+#Navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+    position: sticky;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
+#Navbar ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+
+}
+
+#Navbar li {
+    margin-right: 30px;
+    float: left;
+    color: black;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#Navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    box-shadow: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#Navbar .fixed {
+    position: sticky;
+    top: 0%;
+    left: 0%;
+
+}
+
+#Navbar h1 {
+    font-family: "Sevillana", cursive;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-left: 3vw;
+    cursor: pointer;
+}
+
+#Navbar h1:hover{
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 1s;
+}
+
+.ContainerQuemSomos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.ContainerMenorQuemSomos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 90%;
+    background-color: #D9D9D9;
+    border-radius: 10%;
+    box-shadow: -13px 13px 11px 12px #000000a3
+
+}
+
+.ContainerConteudoQuemSomos {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-self: start;
+    flex-direction: column;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+
+}
+
+.ContainerConteudoQuemSomos h1 {
+    margin-left: 10%;
+    font-size: xx-large;
+}
+
+.ContainerQuemSomos p {
+    width: 90%;
+    margin: 6%;
+    font-size: x-large;
+}
+
+/* Quem somos  */
+
+#VideoDepoimentos {
+    height: 90%;
+    width: 100%;
+    border-radius: 12%;
+}
+
+.ContainerDepoimento1 {
+    display: flex;
+    width: 100%;
+    height: 115cap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ContainerMenorQuemSomos1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    background-color: #D9D9D9;
+    border-radius: 10%;
+    box-shadow: -13px 13px 11px 12px #000000a3
+
+}
+
+.ContainerConteudoQuemSomos1 {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    justify-self: start;
+    flex-direction: column;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+
+}
+
+.ContainerConteudoQuemSomos1 h1 {
+    margin-left: 10%;
+    font-size: xx-large;
+}
+
+.ContainerConteudoQuemSomos1 p {
+    width: 90%;
+    font-size: x-large;
+    margin-left: 6%;
+    margin-bottom: 0%;
+
+}
+
+.ContainerConteudoQuemSomos1 button {
+    width: 60%;
+    height: 10%;
+    font-size: x-large;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    border-radius: 100px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #add8e6ad;
+    margin-left: 20%;
+    box-shadow: -9px 9px 9px 0px #1291b759;
+    /* border: 2px #0f2fbe solid; */
+}
+
+.ContainerConteudoQuemSomos1 button:hover {
+    background-color: #add8e6ad;
+    transition: 1s;
+    /* border: 2px #0f2fbe solid; */
+}
+
+.cor1 {
+    animation: Cor1 2s forwards;
+}
+
+.cor2 {
+    animation: Cor2 5s forwards;
+}
+@keyframes Cor1 {
+    from {
+        background-color: #add8e6ad;
+        color: black;
+        /* border-color: #001aff; */
+    }
+    to {
+        background-color: #0b4152;
+        color: white;
+        border-color: white;
+    }
+}
+
+@keyframes Cor2 {
+    from {
+        background-color: #0b4152;
+        color: white;
+        border-color: white;
+    }
+    to {
+        background-color: #add8e6ad;
+        color: black;
+        /* border-color: #001aff; */
+    }
+}
+
+
+/* Quiz */
+
+.ContainerQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.ContainerMenorQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 90%;
+}
+
+.ConteudoQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 10%;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    box-shadow: -13px 13px 11px 12px #000000a3
+}
+
+.ConteudoQuiz h1 {
+    font-size: xx-large;
+    margin: 0px;
+}
+
+.ConteudoQuiz p {
+    width: 90%;
+    font-size: x-large;
+
+}
+
+.ConteudoQuiz button {
+    width: 60%;
+    height: 10%;
+    font-size: x-large;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    border-radius: 100px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #add8e6ad;
+    box-shadow: -9px 9px 9px 0px #1291b759;
+    /* border: 2px #0f2fbe solid; */
+}
+
+.ConteudoQuiz button:hover {
+    background-color: #add8e6ad;
+    transition: 10s;
+    /* border: 2px #0f2fbe solid; */
+}
+
+.ContainerAgradecimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100%;
+}
+
+.ContainerMenorAgradecimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    background-color: #D9D9D9;
+    border-radius: 5%;
+}
+
+.ConteudoAgradecimentos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+}
+
+.ConteudoAgradecimentos h1 {
+    font-size: xx-large;
+}
+
+.ConteudoAgradecimentos p {
+    font-size: x-large;
+}
+
+.GrupoDePessoas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
