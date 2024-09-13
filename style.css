@@ -388,10 +388,63 @@ body {
     font-size: x-large;
 }
 
+#Texto {
+    font-size: x-large;
+}
 .GrupoDePessoas {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     height: 100%;
+}
+
+#Pessoa {
+    height: 60%;
+    width: 50%;
+}
+
+#Pessoa:hover {
+    transition: 1s;
+    border-radius: 25%;
+}
+
+#Pessoa1 {
+    width: 60%;
+    opacity: 0;
+    visibility: hidden; /* Escondido, mas ainda ocupa espaço */
+    transition: opacity 1s ease, visibility 0s 1s; /* Delayed visibility change */
+}
+
+#Pessoa:hover #Pessoa1 {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s 0s; /* Remove delay */
+}
+
+
+.Conteudopessoa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    transition: 1s;
+}
+
+.Conteudopessoa #Pessoa1 {
+    position: absolute;
+    width: 60%;
+    top: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+}
+
+.Conteudopessoa:hover #Pessoa1 {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s 0s;
 }
