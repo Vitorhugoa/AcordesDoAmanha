@@ -25,13 +25,13 @@ body {
     justify-content: center;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
 
 .Container {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .Container h1 {
@@ -40,6 +40,7 @@ body {
     font-family: "Sevillana", cursive;
     font-weight: 400;
     margin: 0px;
+    animation: Titulo 3s ease-in-out;
 }
 
 .Container h2 {
@@ -48,6 +49,7 @@ body {
     font-family: "Sevillana", cursive;
     font-weight: 400;
     margin: 0px;
+    animation: Subtitulo 3s ease-in-out;
 }
 
 .ContaineMenor {
@@ -56,6 +58,7 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
 
 .duas-cores {
     background: linear-gradient(to right, red, blue);
@@ -110,7 +113,6 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     box-shadow: 15px;
-    color: white;
     cursor: pointer;
 }
 
@@ -130,6 +132,12 @@ body {
 }
 
 #Navbar h1:hover{
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 1s;
+}
+#Navbar a:hover{
     background: linear-gradient(to right, red, blue);
     -webkit-background-clip: text;
     color: transparent;
@@ -364,9 +372,9 @@ body {
     align-items: center;
     justify-content: center;
     width: 90%;
-    height: 90%;
+    height: 100%;
     background-color: #D9D9D9;
-    border-radius: 5%;
+    /* border-radius: 5%; */
 }
 
 .ConteudoAgradecimentos {
@@ -384,21 +392,19 @@ body {
     font-size: xx-large;
 }
 
-.ConteudoAgradecimentos p {
-    font-size: x-large;
-}
-
 #Texto {
     font-size: x-large;
 }
+
 .GrupoDePessoas {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: row;
     width: 100%;
     height: 100%;
+    transition: 1s;
 }
-
 #Pessoa {
     height: 60%;
     width: 50%;
@@ -408,9 +414,19 @@ body {
     transition: 1s;
     border-radius: 25%;
 }
+.Conteudopessoa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    transition: 1s;
+}
+
 
 #Pessoa1 {
-    width: 60%;
+    width: 80%;
     opacity: 0;
     visibility: hidden; /* Escondido, mas ainda ocupa espaço */
     transition: opacity 1s ease, visibility 0s 1s; /* Delayed visibility change */
@@ -421,7 +437,6 @@ body {
     visibility: visible;
     transition: opacity 1s ease, visibility 0s 0s; /* Remove delay */
 }
-
 
 .Conteudopessoa {
     position: relative;
@@ -447,4 +462,41 @@ body {
     opacity: 1;
     visibility: visible;
     transition: opacity 1s ease, visibility 0s 0s;
+}
+
+@keyframes Titulo{
+    from{
+        margin-left: 200%;
+        width: 300%;
+        opacity: 0%;
+    }   
+    to{
+        width: 100%;
+        opacity: 100%;
+    }
+}
+
+@keyframes Subtitulo{
+    from{
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 100%;
+        width: 100%;
+    }   
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    filter: blur(15px);
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 3s ease;
+    transform: translateY(0%);
+    filter: blur(0px);
 }

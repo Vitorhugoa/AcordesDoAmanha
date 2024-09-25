@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acordes do Amanhã | Vitor Hugo</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Configuração das fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <!-- Configuração do icone do Site  -->
     <link rel="icon" type="assets/NotaMusical.png" href="assets/NotaMusical.png">
+    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -26,13 +29,13 @@
     <nav id="Navbar">
         <h1 id="Acordes">Acordes do Amanhã</h1>
         <ul>
-            <li>Home</li>
-            <li>Desafios</li>
-            <li>Nosso Objetivo</li>
-            <li>Agradecimentos</li>
+            <li><a href="">Home          </a></li>
+            <li><a href="">Desafios      </a></li>
+            <li><a href="">Nosso Objetivo</a></li>
+            <li><a href="">Agradecimentos</a></li>
         </ul>
     </nav>
-    <section id="QuemSomos">
+    <section class="hidden" id="QuemSomos">
 
         <div class="ContainerQuemSomos">
             <div class="ContainerMenorQuemSomos">
@@ -52,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section id="Depoimentos">
+    <section class="hidden" id="Depoimentos">
         <div class="ContainerDepoimento1">
             <div class="ContainerMenorQuemSomos1">
                 <div class="ContainerConteudoQuemSomos1">
@@ -78,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section id="Quiz">
+    <section class="hidden" id="Quiz">
         <div class="ContainerQuiz">
             <div class="ContainerMenorQuiz">
                 <div class="ConteudoQuiz">
@@ -98,7 +101,7 @@
             </div>
         </div>
     </section>
-    <section id="Agradecimentos">
+    <section class="hidden" id="Agradecimentos">
         <div class="ContainerAgradecimentos">
             <div class="ContainerMenorAgradecimentos">
                 <div class="ConteudoAgradecimentos">
@@ -184,40 +187,44 @@
 
 <script>
     const button = document.querySelector('.ContainerConteudoQuemSomos1 button');
-    
-    function startAnimation() {
-        button.classList.add('cor1');
-        
-        setTimeout(() => {
-            button.classList.remove('cor1');
-            button.classList.add('cor2');
-        }, 2000); // Inicia a animação Cor2 após 2 segundos
-    
-        setTimeout(() => {
-            button.classList.remove('cor2');
-            ; // Reinicia a sequência
-        }, 7000); // Duração total de Cor1 + Cor2
-    }
-    
-    // Inicie a animação quando o botão for sobreposto
-    button.addEventListener('mouseover', startAnimation);
 
-    const buttonQuiz = document.querySelector('.ConteudoQuiz button');
-    
-    function startAnimationQuiz() {
-        buttonQuiz.classList.add('cor1');
-        
-        setTimeout(() => {
-            buttonQuiz.classList.remove('cor1');
-            buttonQuiz.classList.add('cor2');
-        }, 2000); // Inicia a animação Cor2 após 2 segundos
-    
-        setTimeout(() => {
-            buttonQuiz.classList.remove('cor2');
-            ; // Reinicia a sequência
-        }, 7000); // Duração total de Cor1 + Cor2
-    }
-    
-    // Inicie a animação quando o botão for sobreposto
-    buttonQuiz.addEventListener('mouseover', startAnimationQuiz);
+function startAnimation() {
+    button.classList.add('cor1');
+
+    setTimeout(() => {
+        button.classList.remove('cor1');
+        button.classList.add('cor2');
+    }, 2000); // Inicia a animação Cor2 após 2 segundos
+
+    setTimeout(() => {
+        button.classList.remove('cor2');
+        ; // Reinicia a sequência
+    }, 7000); // Duração total de Cor1 + Cor2
+}
+
+// Inicie a animação quando o botão for sobreposto
+button.addEventListener('mouseover', startAnimation);
+
+const buttonQuiz = document.querySelector('.ConteudoQuiz button');
+
+function startAnimationQuiz() {
+    buttonQuiz.classList.add('cor1');
+
+    setTimeout(() => {
+        buttonQuiz.classList.remove('cor1');
+        buttonQuiz.classList.add('cor2');
+    }, 2000); // Inicia a animação Cor2 após 2 segundos
+
+    setTimeout(() => {
+        buttonQuiz.classList.remove('cor2');
+        ; // Reinicia a sequência
+    }, 7000); // Duração total de Cor1 + Cor2
+}
+
+// Inicie a animação quando o botão for sobreposto
+buttonQuiz.addEventListener('mouseover', startAnimationQuiz);
+
+
+
+
 </script>
