@@ -16,23 +16,24 @@
 </head>
 
 <body>
-    <!-- Colocar Animação de entrada no site -->
-    <div class="ContainerMaior">
-        <div class="Container">
-            <div class="ContainerMenor">
-                <h1 class="duas-cores">Acordes do Amanhã</h1>
-                <h2>Uma Nova oportunidade de Aprender Música</h2>
+    <section id="Inicio">
+
+        <div class="ContainerMaior">
+            <div class="Container">
+                <div class="ContainerMenor">
+                    <h1 class="duas-cores">Acordes do Amanhã</h1>
+                    <h2>Uma Nova oportunidade de Aprender Música</h2>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <nav id="Navbar">
-        <h1 id="Acordes">Acordes do Amanhã</h1>
+        <h1 id="Acordes"><a onclick="scrollToSection(`Inicio`)" href="#Inicio">Acordes do Amanhã</a></h1>
         <ul>
-            <li><a href="">Home          </a></li>
-            <li><a href="">Desafios      </a></li>
-            <li><a href="">Nosso Objetivo</a></li>
-            <li><a href="">Agradecimentos</a></li>
+            <li><a onclick="scrollToSection(`QuemSomos`)" href="#QuemSomos">Home </a></li>
+            <li><a onclick="scrollToSection(`Quiz`)" href="#Quiz">Desafios </a></li>
+            <li><a onclick="scrollToSection(`Depoimentos`)" href="#Depoimentos">Nosso Objetivo</a></li>
+            <li><a onclick="scrollToSection(`Agradecimentos`)" href="#Agradecimentos">Agradecimentos</a></li>
         </ul>
     </nav>
     <section class="hidden" id="QuemSomos">
@@ -74,7 +75,6 @@
                 </div>
             </div>
             <div style="height: 100vh; width: 30vw; display: flex; justify-content: center; align-items: center;">
-                <!-- <img id="VideoDepoimentos" src="./assets/Ide.jpeg" alt=""> -->
                 <video id="VideoDepoimentos" autoplay muted loop>
                     <source src="./assets/videos/Depoimentos.mp4" type="video/mp4">
                 </video>
@@ -225,6 +225,26 @@ function startAnimationQuiz() {
 buttonQuiz.addEventListener('mouseover', startAnimationQuiz);
 
 
+ // Seleciona todos os cards
+ const cards = document.querySelectorAll('.Conteudopessoa');
 
+// Adiciona eventos de mouseover e mouseout
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        cards.forEach(otherCard => {
+            // Se o card não for o que está sendo 'hovered', aplica o blur
+            if (otherCard !== card) {
+                otherCard.classList.add('blur');
+            }
+        });
+    });
+
+    card.addEventListener('mouseout', () => {
+        // Remove o blur de todos os cards quando o mouse sair
+        cards.forEach(otherCard => {
+            otherCard.classList.remove('blur');
+        });
+    });
+});
 
 </script>

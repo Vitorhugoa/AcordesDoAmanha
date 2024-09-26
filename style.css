@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .sevillana-regular {
     font-family: "Sevillana", cursive;
     font-weight: 400;
@@ -157,7 +161,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 55%;
-    height: 90%;
+    height: 60%;
     background-color: #D9D9D9;
     border-radius: 10%;
     box-shadow: -13px 13px 11px 12px #000000a3
@@ -198,7 +202,7 @@ body {
 .ContainerDepoimento1 {
     display: flex;
     width: 100%;
-    height: 115cap;
+    height: 110cap;
     align-items: center;
     justify-content: space-around;
 }
@@ -208,7 +212,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
-    height: 50%;
+    height: 60%;
     background-color: #D9D9D9;
     border-radius: 10%;
     box-shadow: -13px 13px 11px 12px #000000a3
@@ -257,7 +261,7 @@ body {
 
 .ContainerConteudoQuemSomos1 button:hover {
     background-color: #add8e6ad;
-    transition: 1s;
+    transition: all 1s;
     /* border: 2px #0f2fbe solid; */
 }
 
@@ -303,7 +307,7 @@ body {
     justify-content: center;
     height: 100dvh;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .ContainerMenorQuiz {
@@ -374,7 +378,7 @@ body {
     width: 90%;
     height: 100%;
     background-color: #D9D9D9;
-    /* border-radius: 5%; */
+    border-radius: 5%;
 }
 
 .ConteudoAgradecimentos {
@@ -403,8 +407,21 @@ body {
     flex-direction: row;
     width: 100%;
     height: 100%;
-    transition: 1s;
 }
+.Conteudopessoa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    transition: all 2s;
+}
+.blur {
+    filter: blur(5px);
+}
+
 #Pessoa {
     height: 60%;
     width: 50%;
@@ -414,16 +431,6 @@ body {
     transition: 1s;
     border-radius: 25%;
 }
-.Conteudopessoa{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    transition: 1s;
-}
-
 
 #Pessoa1 {
     width: 80%;
@@ -438,21 +445,10 @@ body {
     transition: opacity 1s ease, visibility 0s 0s; /* Remove delay */
 }
 
-.Conteudopessoa {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    transition: 1s;
-}
-
 .Conteudopessoa #Pessoa1 {
     position: absolute;
-    width: 60%;
-    top: 80%;
+    width: 70%;
+    top: 60%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease, visibility 0s 1s;
